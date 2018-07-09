@@ -1,0 +1,89 @@
+
+
+WORPRESS TEMPLATE HIERARCHY 
+
+What page?
+
+│
+╰── Error 404 page ─────────────────────────────────── 404.php ───────────────╮
+│                                                                             │
+╰── Archive page                                                              │
+│   ╰───── Custom taxonomy archive                                            │
+│   │      ╰── taxonomy-$taxonomy-$term.php                                   │
+│   │          ╰── taxonomy-$taxonomy.php                                     │
+│   │              ╰── taxonomy.php ────────────────╮                         │
+│   │                                               │                         │
+│   ╰───── Category archive                         │                         │
+│   │      ╰── category-$slug.php                   │                         │
+│   │          ╰── category-$id.php                 │                         │
+│   │              ╰── category.php ────────────────╮                         │
+│   │                                               │                         │
+│   ╰───── Tag archive                              │                         │
+│   │      ╰── tag-$slug.php                        │                         │
+│   │          ╰── tag-$id.php                      │                         │
+│   │              ╰── tag.php ─────────────────────╮                         │
+│   │                                               │                         │
+│   ╰───── Author archive                           │                         │
+│   │      ╰── author-$nicename.php                 │                         │
+│   │          ╰── author-$id.php                   │                         │
+│   │              ╰── author.php ──────────────────╮                         │
+│   │                                               │                         │
+│   ╰───── Date archive                             │                         │
+│   │      ╰── Year archive ────────────╮           │                         │
+│   │      ╰── Month archive ───────────╮           │                         │
+│   │      ╰── Day archive ──────────── date.php ───╮                         │
+│   │                                               │                         │
+│   ╰───── Custom Post Type archive                 │                         │
+│          ╰── archive-$posttype.php ───────────────╮                         │
+│                                                   archive.php               │
+│                                                   ╰── Paged                 │
+│                                                       ╰── true              │
+│                                                       │   ╰── paged.php ────╮
+│                                                       ╰── false ────────────╮
+│                                                                             │
+╰── Search page ─────────────────────────────────── search.php ───────────────╮
+│                                                                             │
+╰── Singular page                                                             │
+│   ╰── Single Post page                                                      │
+│   │   ╰── Attachment Post                                                   │
+│   │   │   ╰── $mimetype.php                                                 │
+│   │   │       ╰── $subtype.php                                              │
+│   │   │           ╰── $mimetype_$subtype.php                                │
+│   │   │               ╰── attachment.php ─────────────╮                     │
+│   │   │                                               │                     │
+│   │   ╰── Custom Post                                 │                     │
+│   │   │   ╰────────────── single-$posttype.php ───────╮                     │
+│   │   │                                               │                     │
+│   │   ╰── Blog Post                                   │                     │
+│   │       ╰────────────── single-post.php ────────────╮                     │
+│   │                                                   single.php ───────────╮
+│   │                                                                         │
+│   ╰── Static page                                                           │
+│       ╰── Page Template ──────────╮                                         │
+│           ╰── Custom              │                                         │
+│           │   ╰── $custom.php ───────────╮                                  │
+│           │                       │      │                                  │
+│           ╰── Default             │      │                                  │
+│               ╰───────────────────────── page-$slug.php                     │
+│                                   │      ╰── page-$id.php                   │
+│                                   │          ╰──── page.php ────────────────╮
+│                                   │                                         │
+╰── Site Front page                 │                                         │
+│   ╰── front-page.php              │                                         │
+│       ╰── Shown On Front          │                                         │
+│           ╰── Page ───────────────╯                                         │
+│           ╰── Posts ───────────────────────────────╮                        │
+│                                                    home.php ────────────────╮
+│                                                    │                        │
+╰── Blog Post Index page ────────────────────────────╯                        │
+│                                                                             │
+╰── Comments Popup page                                                       │
+    ╰─────────────────────────────────────────────── comments-popup.php ──────╮
+                                                                              │
+                                                                              │
+                                                                          index.php
+
+
+
+© 2018-07-09 Fabrizio Schiavi fsd.it
+Set in Pragmata Pro™
